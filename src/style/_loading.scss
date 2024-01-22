@@ -1,0 +1,49 @@
+.spinner {
+  text-align: center;
+
+  div {
+    width: 10px;
+    height: 10px;
+    background: #22545A;
+    border-radius: 100%;
+    display: inline-block;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  div + div {
+    margin-left: 12px;
+    background: #33636B;
+  }
+
+  div + div + div {
+    background: #42747C;
+  }
+
+  .bounce-1 {
+    animation-delay: -0.32s;
+  }
+
+  .bounce-2 {
+    animation-delay: -0.16s;
+  }
+}
+
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .spinner {
+    div {
+      background: #DCE3E5 !important;
+    }
+  }
+}
